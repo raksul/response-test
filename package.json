@@ -1,0 +1,40 @@
+{
+  "name": "response-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:prod": "better-npm-run test:prod",
+    "test:stg": "better-npm-run test:stg",
+    "test:dev": "better-npm-run test:dev"
+  },
+  "betterScripts": {
+    "test:prod": {
+      "command": "mocha test/*.spec.js --opts ./mocha.opts",
+      "env": {
+        "NODE_ENV": "prod"
+      }
+    },
+    "test:dev": {
+      "command": "mocha test/*.spec.js --opts ./mocha.opts",
+      "env": {
+        "NODE_ENV": "dev"
+      }
+    },
+    "test:stg": {
+      "command": "mocha test/*.spec.js --opts ./mocha.opts",
+      "env": {
+        "NODE_ENV": "stg"
+      }
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-npm-run": "0.0.11",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "dotenv": "^2.0.0",
+    "mocha": "^3.0.2"
+  }
+}

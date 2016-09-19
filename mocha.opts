@@ -1,0 +1,2 @@
+--require ./mocha.init
+--timeout 20000
