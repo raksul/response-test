@@ -8,7 +8,7 @@
 
 #### osx の場合
 
-```
+```sh
 brew update
 brew install node
 npm install
@@ -20,7 +20,7 @@ npm install
 
 env.example から .env の作成
 
-```
+```sh
 cp env.example .env
 ```
 
@@ -28,7 +28,7 @@ cp env.example .env
 
 .env ファイルを編集する。それぞれの変数の意味は以下の通り
 
-```
+```sh
 # env.example の説明
 DEV_BASIC_AUTH_USERNAME=yamamoto     # Basic ユーザー名
 DEV_BASIC_AUTH_PASSWORD=password     # Basic パスワード
@@ -38,7 +38,7 @@ LOGIN_FORM_PARAM_NAME_PASSWORD=pass  # 2. login form の post パラメータ2(n
 LOGIN_USER=                          # 3. login するアカウント(1. のvalue にあたる)
 LOGIN_USER_PASSWORD=                 # 4. login するアカウントのパスワード(2. のvalue にあたる)
 
-PROTOCOL=https　　　　　　　　　　　　　 # https or http
+PROTOCOL=https                       # https or http
 BASE_DOMAIN=example.com              # テスト対象のドメイン
 DEV_SUBDOMAIN=dev                    # 開発環境用のサブドメイン
 STG_SUBDOMAIN=stage                  # stage用のサブドメイン
@@ -50,17 +50,15 @@ NODE_TLS_REJECT_UNAUTHORIZED=0       # 証明書のエラーを無視
 
 urls.js ファイルを編集する。それぞれの変数の意味は以下の通り
 
-```
-vi urls.js
-
+```JavaScript
 # urls.js の説明
 module.exports = {
-  login: '/login/',  # login フォームのあるURL
-  withoutAuth: [     # login 不要ページ一覧
+  login: '/login/',  // login フォームのあるURL
+  withoutAuth: [     // login 不要ページ一覧
     '/',
     '/privacy/',
   ],
-  withAuth: [        # login 必要ページ一覧
+  withAuth: [        // login 必要ページ一覧
     '/mypage/',
   ]
 };
@@ -68,7 +66,7 @@ module.exports = {
 
 ### 4. テスト実行
 
-```
+```sh
 npm run test:prod #https://example.com
 npm run test:dev  #https://dev.example.com
 ```
@@ -78,7 +76,7 @@ npm run test:dev  #https://dev.example.com
 #### ディレクトリ構成
 
 
-```
+```sh
 ./
 ├── env.example                # 環境変数の設定例
 ├── global.conf.js             # 共通で利用する設定
