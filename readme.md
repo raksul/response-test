@@ -1,5 +1,7 @@
 ## Getting Started
 
+blog: https://tech.raksul.com/2016/09/20/start_testing_from_here/
+
 ### 環境
 
 - node >= 5.0
